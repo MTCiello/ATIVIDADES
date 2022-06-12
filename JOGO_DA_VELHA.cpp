@@ -13,36 +13,40 @@ void VELHA();
 
 int TESTE_LINHA(){
 
-    if (BASE[0][0]=='X' && BASE[0][1]=='X' && BASE[0][2]=='X' ||
-        BASE[0][0]=='O' && BASE[0][1]=='O' && BASE[0][2]=='O'   ) {return 1;} else return 0;
-    if (BASE[1][0]=='X' && BASE[1][1]=='X' && BASE[1][2]=='X' ||
-        BASE[1][0]=='O' && BASE[1][1]=='O' && BASE[1][2]=='O'   ) {return 1;} else return 0;
-    if (BASE[2][0]=='X' && BASE[2][1]=='X' && BASE[2][2]=='X' ||
-        BASE[2][0]=='O' && BASE[2][1]=='O' && BASE[2][2]=='O'   ) {return 1;} else return 0;
+         if (BASE[0][0]=='X' && BASE[0][1]=='X' && BASE[0][2]=='X') {return 1;}
+    else if (BASE[0][0]=='O' && BASE[0][1]=='O' && BASE[0][2]=='O') {return 2;}
+    else if (BASE[1][0]=='X' && BASE[1][1]=='X' && BASE[1][2]=='X') {return 1;}
+    else if (BASE[1][0]=='O' && BASE[1][1]=='O' && BASE[1][2]=='O') {return 2;}
+    else if (BASE[2][0]=='X' && BASE[2][1]=='X' && BASE[2][2]=='X') {return 1;}
+    else if (BASE[2][0]=='O' && BASE[2][1]=='O' && BASE[2][2]=='O') {return 2;} 
+    else return 0;
 
 }
 
 int TESTE_COLUNA(){
 
-    if (BASE[0][0]=='X' && BASE[1][0]=='X' && BASE[2][0]=='X' || 
-        BASE[0][0]=='O' && BASE[1][0]=='O' && BASE[2][0]=='O'   ) {return 1;} else return 0;
-    if (BASE[0][1]=='X' && BASE[1][1]=='X' && BASE[2][1]=='X' ||
-        BASE[0][1]=='O' && BASE[1][1]=='O' && BASE[2][1]=='O'   ) {return 1;} else return 0;
-    if (BASE[0][2]=='X' && BASE[1][2]=='X' && BASE[2][2]=='X' ||
-        BASE[0][2]=='O' && BASE[1][2]=='O' && BASE[2][2]=='O'   ) {return 1;} else return 0;
+         if (BASE[0][0]=='X' && BASE[1][0]=='X' && BASE[2][0]=='X') {return 1;} 
+    else if (BASE[0][0]=='O' && BASE[1][0]=='O' && BASE[2][0]=='O') {return 2;} 
+    else if (BASE[0][1]=='X' && BASE[1][1]=='X' && BASE[2][1]=='X') {return 1;} 
+    else if (BASE[0][1]=='O' && BASE[1][1]=='O' && BASE[2][1]=='O') {return 2;} 
+    else if (BASE[0][2]=='X' && BASE[1][2]=='X' && BASE[2][2]=='X') {return 1;}
+    else if (BASE[0][2]=='O' && BASE[1][2]=='O' && BASE[2][2]=='O') {return 2;} 
+    else return 0;
     
 }
 
 int TESTE_D1(){
 
-if (BASE[0][0] == 'X' && BASE[1][1] == 'X' && BASE[2][2] == 'X' ||
-    BASE[0][0] == 'O' && BASE[1][1] == 'O' && BASE[2][2] == 'O'   ){return 1;} else return 0;
+     if (BASE[0][0] == 'X' && BASE[1][1] == 'X' && BASE[2][2] == 'X') {return 1;} 
+else if (BASE[0][0] == 'O' && BASE[1][1] == 'O' && BASE[2][2] == 'O') {return 2;} 
+else return 0;
 }
 
 int TESTE_D2(){
 
-if (BASE[0][2] == 'X' && BASE[1][1] == 'X' && BASE[2][0] == 'X' ||
-    BASE[0][2] == 'O' && BASE[1][1] == 'O' && BASE[2][0] == 'O'   ){return 1;} else {return 0;}
+     if (BASE[0][2] == 'X' && BASE[1][1] == 'X' && BASE[2][0] == 'X') {return 1;}
+else if (BASE[0][2] == 'O' && BASE[1][1] == 'O' && BASE[2][0] == 'O') {return 2;}
+else {return 0;}
 
 
 }
