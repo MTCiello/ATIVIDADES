@@ -76,7 +76,7 @@ USUARIO();
 
 
     if (R==1){
-        return 1;    
+        return 1;   
     } else {
         return 2;
     }
@@ -86,9 +86,10 @@ USUARIO();
 
 int main (){
 
-    int J1L, J1C, J2L, J2C, T=0, AUX;
+    int J1L, J1C, J2L, J2C, T=0, AUX, TESTE;
 
 while(VENCEDOR()<=1 && T!=9){
+    T=0;
 
     LIMPA;
     INICIO();
@@ -190,14 +191,3 @@ void COMEMORA (){
 }
 
 void VELHA(){
-
-    printf("%c", 201);
-    for(int i=0;i<30;i++) printf("%c",205);
-    printf("%c\n", 187);
-
-    printf("%c            VELHA             %c\n", 186, 186);
-    
-    printf("%c", 200);
-    for(int i=0;i<30;i++) printf("%c",205);
-    printf("%c\n", 188); 
-}
