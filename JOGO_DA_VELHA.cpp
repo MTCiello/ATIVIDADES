@@ -51,6 +51,7 @@ else {return 0;}
 
 }
 
+
 int VENCEDOR(){
     int G=0, R=0;
 
@@ -76,7 +77,7 @@ USUARIO();
 
 
     if (R==1){
-        return 1;   
+        return 1;    
     } else {
         return 2;
     }
@@ -86,10 +87,10 @@ USUARIO();
 
 int main (){
 
-    int J1L, J1C, J2L, J2C, T=0, AUX, TESTE;
+    int J1L, J1C, J2L, J2C, T=0, AUX;
 
 while(VENCEDOR()<=1 && T!=9){
-    T=0;
+    T = 0;
 
     LIMPA;
     INICIO();
@@ -98,7 +99,7 @@ while(VENCEDOR()<=1 && T!=9){
         
 
     USUARIO();
-    printf("JOGADOR 1:\n");
+    printf("JOGADOR 1 [X]:\n");
     AUX = 1;
     while(AUX>0){
         scanf("%d %d", &J1L, &J1C);
@@ -119,7 +120,7 @@ while(VENCEDOR()<=1 && T!=9){
     
 
     USUARIO();
-    printf("JOGADOR 2:\n");
+    printf("JOGADOR 2 [O]:\n");
     AUX = 1;
     while(AUX>0){
         scanf("%d %d", &J2L, &J2C);
@@ -138,7 +139,7 @@ while(VENCEDOR()<=1 && T!=9){
 
     }
     }
-        if(T==9){USUARIO(); VELHA();} else {COMEMORA();}
+        if(T==9 && VENCEDOR==0){USUARIO(); VELHA();} else {COMEMORA();}
         
     system("pause");
     
@@ -191,3 +192,14 @@ void COMEMORA (){
 }
 
 void VELHA(){
+
+    printf("%c", 201);
+    for(int i=0;i<30;i++) printf("%c",205);
+    printf("%c\n", 187);
+
+    printf("%c            VELHA             %c\n", 186, 186);
+    
+    printf("%c", 200);
+    for(int i=0;i<30;i++) printf("%c",205);
+    printf("%c\n", 188); 
+}
